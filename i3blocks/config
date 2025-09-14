@@ -1,0 +1,36 @@
+# ~/.config/i3blocks/config
+# Example i3blocks config with FreeBSD-aware scripts
+separator=false
+markup=pango
+
+# ─── Battery (FreeBSD aware) ───────────────────────────────────────────────
+[battery]
+command=~/.config/i3blocks/scripts/battery.sh
+interval=30
+align=left
+color=#ABE9B3
+# ─── Volume (works with amixer/pactl on Linux, mixer on FreeBSD) ───────────
+[volume]
+command=~/.config/i3blocks/scripts/volume.sh
+interval=2
+align=right
+color=#F28FAD
+
+# ─── Network (shows active iface and IPv4) ────────────────────────────────
+[net]
+command=~/.config/i3blocks/scripts/net.sh
+interval=5
+align=left
+
+# ─── Music (mpd/mpc or playerctl) ─────────────────────────────────────────
+[music]
+command=~/.config/i3blocks/scripts/music.sh
+interval=5
+align=left
+
+# ─── Date / Time ──────────────────────────────────────────────────────────
+[datetime]
+command=~/.config/i3blocks/scripts/datetime.sh
+interval=1
+align=right
+
